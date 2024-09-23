@@ -1,12 +1,14 @@
 //your JS code here. If required.
-const checkBox = document.querySelectorAll(".toggle");
+const checkboxes = document.querySelectorAll('.toggle');
 
-checkBox.forEach((check) =>{
-	check.addEventListener('change', () => {
-		const checkedBoxes = [...checkBox].filter((cd)=>cd.checked);
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        // Filter the checkboxes to find the ones that are checked
+        const checkedCheckboxes = Array.from(checkboxes).filter(cb => cb.checked);
 
-		if(checkedBoxes.length > 2){
-			checkedBoxes[0].checked = false;
-		}
-	});
+        // If more than 2 checkboxes are checked, uncheck the first one checked
+        if (checkedCheckboxes.length > 2) {
+            checkedCheckboxes[0].checked = false;
+        }
+    });
 });
