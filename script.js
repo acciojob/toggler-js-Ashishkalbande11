@@ -6,7 +6,7 @@ checkBox.forEach((check) =>{
 		const checkedBoxes = [...checkBox].filter((cd)=>cd.checked);
 
 		if(checkedBoxes.length > 2){
-			checkedBoxes[1].checked = false;
+			checkedBoxes[0].checked = false;
 		}
 	});
 });

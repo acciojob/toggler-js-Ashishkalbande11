@@ -42,6 +42,7 @@ h2{
 .toggle:checked::before{
 	transform: translateX(30px);
 }
+
 span{
 	margin-left: 10px;
 	font-size: 18px;
